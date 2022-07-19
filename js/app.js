@@ -15,5 +15,15 @@ let Tokyo = {
   avgCookiePerCust: 1.2,
   dataByHour: {
 
-  }, 
+  },
+};
+
+let Dubai = {
+  location: 'Dubai',
+  minCust: 11,
+  maxCust: 38,
+  avgCookiePerCust: 3.7,
+  dataByHour: {
+
+  },
 };
