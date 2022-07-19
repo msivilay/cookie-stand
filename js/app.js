@@ -6,6 +6,7 @@ let Seattle = {
   dataByHour: {
 
   },
+  getNumCust: numCustPerHour,
 };
 
 let Tokyo = {
@@ -16,6 +17,7 @@ let Tokyo = {
   dataByHour: {
 
   },
+  getNumCust: numCustPerHour,
 };
 
 let Dubai = {
@@ -26,6 +28,7 @@ let Dubai = {
   dataByHour: {
 
   },
+  getNumCust: numCustPerHour,
 };
 
 let Paris = {
@@ -36,6 +39,7 @@ let Paris = {
   dataByHour: {
 
   },
+  getNumCust: numCustPerHour,
 };
 
 let Lima = {
@@ -46,4 +50,17 @@ let Lima = {
   dataByHour: {
 
   },
+  getNumCust: numCustPerHour,
 };
+
+// Min-Max inclusive random number generator from MDN
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
+}
+
+function numCustPerHour(){
+  return getRandomIntInclusive (this.minCust, this.maxCust);
+}
+
