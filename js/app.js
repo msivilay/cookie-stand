@@ -27,3 +27,13 @@ let Dubai = {
 
   },
 };
+
+let Paris = {
+  location: 'Paris',
+  minCust: 20,
+  maxCust: 38,
+  avgCookiePerCust: 2.3,
+  dataByHour: {
+
+  },
+};
