@@ -37,3 +37,13 @@ let Paris = {
 
   },
 };
+
+let Lima = {
+  location: 'Lima',
+  minCust: 2,
+  maxCust: 16,
+  avgCookiePerCust: 4.6,
+  dataByHour: {
+
+  },
+};
