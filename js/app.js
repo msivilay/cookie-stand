@@ -7,3 +7,13 @@ let Seattle = {
 
   },
 };
+
+let Tokyo = {
+  location: 'Tokyo',
+  minCust: 3,
+  maxCust: 24,
+  avgCookiePerCust: 1.2,
+  dataByHour: {
+
+  }, 
+};
