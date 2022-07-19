@@ -1,55 +1,50 @@
-let Seattle = {
+let seattle = {
   location: 'Seattle',
   minCust: 23,
   maxCust: 65,
   avgCookiePerCust: 6.3,
-  dataByHour: {
+  dataByHour:[],
 
-  },
   getNumCust: numCustPerHour,
 };
 
-let Tokyo = {
+let tokyo = {
   location: 'Tokyo',
   minCust: 3,
   maxCust: 24,
   avgCookiePerCust: 1.2,
-  dataByHour: {
+  dataByHour: [],
 
-  },
   getNumCust: numCustPerHour,
 };
 
-let Dubai = {
+let dubai = {
   location: 'Dubai',
   minCust: 11,
   maxCust: 38,
   avgCookiePerCust: 3.7,
-  dataByHour: {
+  dataByHour: [],
 
-  },
   getNumCust: numCustPerHour,
 };
 
-let Paris = {
+let paris = {
   location: 'Paris',
   minCust: 20,
   maxCust: 38,
   avgCookiePerCust: 2.3,
-  dataByHour: {
+  dataByHour: [],
 
-  },
   getNumCust: numCustPerHour,
 };
 
-let Lima = {
+let lima = {
   location: 'Lima',
   minCust: 2,
   maxCust: 16,
   avgCookiePerCust: 4.6,
-  dataByHour: {
+  dataByHour: [],
 
-  },
   getNumCust: numCustPerHour,
 };
 
