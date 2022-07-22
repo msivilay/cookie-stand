@@ -57,7 +57,7 @@ function numCustPerHour(){
 
 function salesData(){
   for (let i=0; i < stores.length; i++){
-    let art = document.getElementById('locations');
+    let art = document.getElementById('stores');
     console.log(art);
 
     let list = document.createElement('ul');
