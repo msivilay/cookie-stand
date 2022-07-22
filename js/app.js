@@ -56,23 +56,23 @@ function numCustPerHour(){
 }
 
 function salesData(){
-  for (let i=0; i < locations.length; i++){
+  for (let i=0; i < stores.length; i++){
     let art = document.getElementById('locations');
     console.log(art);
 
     let list = document.createElement('ul');
 
     let header = document.createElement('h3');
-    header.textContent = locations[i].location;
+    header.textContent = stores[i].location;
     art.appendChild(header);
 
     let total = 0;
 
-    for (let j=0; j < locations[i].dataByHour.length; j++){
+    for (let j=0; j < stores[i].dataByHour.length; j++){
       let li = document.createElement ('li');
-      li.textContent = `${locations[i].dataByHour[j].hour}: ${locations[i].dataByHour[j].numCookiesSold} cookies`;
+      li.textContent = `${stores[i].dataByHour[j].hour}: ${stores[i].dataByHour[j].numCookiesSold} cookies`;
       list.appendChild(li);
-      total += locations[i].dataByHour[j].numCookiesSold;
+      total += stores[i].dataByHour[j].numCookiesSold;
 
     }
     let li = document.createElement('li');
@@ -82,13 +82,13 @@ function salesData(){
   }
 }
 
-let locations = [seattle, tokyo, dubai, paris, lima];
+let stores = [seattle, tokyo, dubai, paris, lima];
 
-for (let i = 0; i < locations.length; i++) {
+for (let i = 0; i < stores.length; i++) {
   for (let j = 0; j < 24; j++) {
     let cookiesSold;
     if (j >= 6 && j < 20) {
-      cookiesSold = Math.round(locations[i].getNumCust() * locations[i].avgCookiePerCust);
+      cookiesSold = Math.round(stores[i].getNumCust() * stores[i].avgCookiePerCust);
     } else {
       cookiesSold = 0;
     }
@@ -100,7 +100,7 @@ for (let i = 0; i < locations.length; i++) {
       hourFormatted = `${j}:00`;
     }
 
-    locations[i].dataByHour.push({numCookiesSold: cookiesSold, hour: hourFormatted});
+    stores[i].dataByHour.push({numCookiesSold: cookiesSold, hour: hourFormatted});
   }
 }
 
