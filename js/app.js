@@ -68,7 +68,7 @@ function salesData(){
 
     let total = 0;
 
-    for (let j=0; j < stores[i].dataByHour.length; j++){
+    for (let j=6; j < 20; j++){
       let li = document.createElement ('li');
       li.textContent = `${stores[i].dataByHour[j].hour}: ${stores[i].dataByHour[j].numCookiesSold} cookies`;
       list.appendChild(li);
