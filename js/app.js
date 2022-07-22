@@ -1,5 +1,5 @@
 'use strict';
-
+//console.log('Hello, world!');
 // Min-Max inclusive random number generator from MDN
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
@@ -8,18 +8,40 @@ function getRandomIntInclusive(min, max) {
   //The maximum is inclusive and the minimum is inclusive
 }
 
-function Store(location, minCust, maxCust, avgCookiePerCust){
+function Store(location, minCust, maxCust, avgCookiePerCust) {
   this.location = location;
   this.minCust = minCust;
   this.maxCust = maxCust;
   this.avgCookiePerCust = avgCookiePerCust;
   this.dataByHour = [];
 }
+//console.log(`Min Cust: ${this.minCust}`);
+Store.prototype = {
+  getNumCust: function() {
+    return getRandomIntInclusive (this.minCust, this.maxCust);
+  },
 
+  generateSalesData: function() {
+    for (let j = 0; j < 24; j++) {
+      let cookiesSold;
+      if (j >= 6 && j < 20) {
+        cookiesSold = Math.round(this.getNumCust() * this.avgCookiePerCust);
+      } else {
+        cookiesSold = 0;
+      }
 
-function numCustPerHour(){
-  return getRandomIntInclusive (this.minCust, this.maxCust);
-}
+      let hourFormatted;
+      if (j < 10) {
+        hourFormatted = `0${j}:00`;
+      } else {
+        hourFormatted = `${j}:00`;
+      }
+
+      this.dataByHour.push({ numCookiesSold: cookiesSold, hour: hourFormatted });
+    }
+  },
+
+};
 
 function salesData(){
   for (let i=0; i < stores.length; i++){
@@ -48,26 +70,17 @@ function salesData(){
   }
 }
 
-let stores = [seattle, tokyo, dubai, paris, lima];
+let stores = [
+  new Store('Seattle', 23, 65, 6.3),
+  new Store('Tokyo', 3, 24, 1.2),
+  new Store('Dubai', 11, 38, 3.7),
+  new Store('Paris', 20, 38, 2.3),
+  new Store('Lima', 2, 16, 4.6),
+];
 
 for (let i = 0; i < stores.length; i++) {
-  for (let j = 0; j < 24; j++) {
-    let cookiesSold;
-    if (j >= 6 && j < 20) {
-      cookiesSold = Math.round(stores[i].getNumCust() * stores[i].avgCookiePerCust);
-    } else {
-      cookiesSold = 0;
-    }
 
-    let hourFormatted;
-    if (j < 10) {
-      hourFormatted = `0${j}:00`;
-    } else {
-      hourFormatted = `${j}:00`;
-    }
-
-    stores[i].dataByHour.push({numCookiesSold: cookiesSold, hour: hourFormatted});
-  }
+  stores[i].generateSalesData();
 }
 
 salesData();
