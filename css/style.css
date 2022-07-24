@@ -12,7 +12,7 @@ span {
 	color:brown;
 	font-size: small;
 }
-
+/*
 ul {
 	list-style-type: disc;
 	margin-bottom: 5px;
@@ -24,7 +24,7 @@ ol {
 	margin-bottom: 5px;
 	padding-left: 2rem;
 }
-
+*/
 body {
 	background-color: antiquewhite;
 }
@@ -37,4 +37,101 @@ th,td {
 
 td {
 	text-align: right;
+}
+/*  */
+
+header {
+  background-color: darkgray;
+  margin-bottom: 30px;
+}
+header nav {
+  height: 100px;
+  margin: auto;
+}
+
+header a {
+  color: lightgray;
+}
+
+header img {
+  color: white;
+}
+
+header nav ul {
+  width: 960px;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style-type: none;
+  margin: auto;
+  padding-top: 15px;
+}
+
+header nav li {
+  flex: 1;
+  text-align: center;
+}
+
+main {
+  width: 960px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  row-gap: 30px;
+}
+main img {
+  margin-bottom: 30px;
+}
+
+section {
+  width: 960px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 30px;
+  align-items: top;
+}
+
+section img {
+  margin:auto;
+  flex:1;
+}
+
+figure {
+  flex:1;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: medium;
+}
+
+p {
+  border-style: none;
+  font-style: italic;
+  flex: 1;
+  overflow-y: scroll;
+  margin-bottom: 5px;
+}
+
+/* Source for invisible scroll: https://stackoverflow.com/questions/16670931/hide-scroll-bar-but-while-still-being-able-to-scroll */
+
+p::-webkit-scrollbar {
+  display: none;
+}
+
+button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 5px 15px;
+}
+footer {
+  margin-top:30px;
+  background-color: gray;
+  height: 130px;
 }
