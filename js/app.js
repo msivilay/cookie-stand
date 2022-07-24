@@ -1,5 +1,5 @@
 'use strict';
-//console.log('Hello, world!');
+
 // Min-Max inclusive random number generator from MDN
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
@@ -15,7 +15,7 @@ function Store(location, minCust, maxCust, avgCookiePerCust) {
   this.avgCookiePerCust = avgCookiePerCust;
   this.dataByHour = [];
 }
-//console.log(`Min Cust: ${this.minCust}`);
+
 Store.prototype = {
   getNumCust: function() {
     return getRandomIntInclusive (this.minCust, this.maxCust);
