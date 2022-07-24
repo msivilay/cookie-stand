@@ -28,3 +28,13 @@ ol {
 body {
 	background-color: antiquewhite;
 }
+
+th,td {
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+}
+
+td {
+	text-align: right;
+}
