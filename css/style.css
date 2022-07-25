@@ -186,3 +186,24 @@ footer {
   background-color: gray;
   height: 130px;
 }
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  margin:auto;
+}
+
+form legend {
+  font-weight: bold;
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+
+form input {
+  display: block;
+}
+
+form button {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
