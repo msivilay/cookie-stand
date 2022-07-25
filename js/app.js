@@ -17,11 +17,11 @@ function Store(location, minCust, maxCust, avgCookiePerCust) {
 }
 
 Store.prototype = {
-  getNumCust: function() {
-    return getRandomIntInclusive (this.minCust, this.maxCust);
+  getNumCust: function () {
+    return getRandomIntInclusive(this.minCust, this.maxCust);
   },
 
-  generateSalesData: function() {
+  generateSalesData: function () {
     for (let j = 0; j < 24; j++) {
       let cookiesSold;
       if (j >= 6 && j < 20) {
@@ -41,7 +41,7 @@ Store.prototype = {
     }
   },
 
-  render: function(tbody) {
+  render: function (tbody) {
     let tr = document.createElement('tr');
 
     let header = document.createElement('th');
@@ -50,8 +50,8 @@ Store.prototype = {
 
     let total = 0;
 
-    for (let j=6; j < 20; j++){
-      let td = document.createElement ('td');
+    for (let j = 6; j < 20; j++) {
+      let td = document.createElement('td');
       td.textContent = this.dataByHour[j].numCookiesSold;
       tr.appendChild(td);
       total += this.dataByHour[j].numCookiesSold;
@@ -110,7 +110,7 @@ function salesDataFooterRow(tfoot) {
   tfoot.appendChild(tr);
 }
 
-function salesData(){
+function salesData() {
   let art = document.getElementById('stores');
 
   let table = document.createElement('table');
@@ -120,7 +120,7 @@ function salesData(){
   table.appendChild(thead);
 
   let tbody = document.createElement('tbody');
-  for (let i=0; i < stores.length; i++){
+  for (let i = 0; i < stores.length; i++) {
     stores[i].render(tbody);
   }
   table.appendChild(tbody);
@@ -131,6 +131,34 @@ function salesData(){
 
   art.appendChild(table);
 }
+
+function handleSubmit(event) {
+  event.preventDefault();
+
+  let location = event.target.location.value;
+  let minCust = event.target.minCust.value;
+  let maxCust = event.target.maxCust.value;
+  let avgCookiesPerCust = event.target.avgCust.value;
+
+
+  let store = new Store(location, minCust, maxCust, avgCookiesPerCust);
+
+  store.generateSalesData();
+
+  stores.push(store);
+
+  let tbody = document.querySelector('tbody');
+
+  let tfoot = document.querySelector('tfoot');
+
+  store.render(tbody);
+
+  tfoot.replaceChildren();
+
+  salesDataFooterRow(tfoot);
+
+}
+
 
 let stores = [
   new Store('Seattle', 23, 65, 6.3),
@@ -146,3 +174,7 @@ for (let i = 0; i < stores.length; i++) {
 }
 
 salesData();
+
+let form = document.querySelector('form');
+
+form.addEventListener('submit', handleSubmit);
