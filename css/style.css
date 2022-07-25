@@ -25,6 +25,7 @@ ol {
 	padding-left: 2rem;
 }
 */
+
 body {
 	background-color: antiquewhite;
 }
@@ -39,6 +40,16 @@ td {
 	text-align: right;
 }
 /*  */
+/* Oval frame styling from: https://www.codegrepper.com/code-examples/css/how+to+make+an+image+oval+in+css */
+
+.oval {
+		width: 960px;
+		height: 500px;
+		background: #a84909;
+		border-radius: 50%;
+}
+
+/* Wireframe Exercise Style added below */
 
 header {
   background-color: darkgray;
@@ -93,9 +104,11 @@ section {
   align-items: top;
 }
 
-section img {
-  margin:auto;
-  flex:1;
+section:nth-of-type(2) img {
+	border-radius: 25px;
+	width: 282px;
+  height: 250px;
+	object-fit: cover;
 }
 
 figure {
@@ -103,6 +116,11 @@ figure {
   height: 400px;
   display: flex;
   flex-direction: column;
+}
+
+figure img {
+	object-fit: contain;
+	border-radius: 25px;
 }
 
 h4 {
