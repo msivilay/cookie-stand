@@ -14,19 +14,6 @@ span {
 	color:brown;
 	font-size: small;
 }
-/*
-ul {
-	list-style-type: disc;
-	margin-bottom: 5px;
-	padding-left: 2rem;
-}
-
-ol {
-	list-style-type:decimal;
-	margin-bottom: 5px;
-	padding-left: 2rem;
-}
-*/
 
 body {
 	background-color: antiquewhite;
@@ -171,6 +158,29 @@ button {
   border: none;
   padding: 5px 15px;
 }
+
+section:nth-of-type(n+4) {
+	flex-direction: column;
+	text-align: center;
+	align-content: center;
+
+}
+
+section:nth-of-type(n+4) h4 {
+	font-weight: bold;
+}	
+
+section ul {
+	display:flex;
+	list-style-type: none;
+	margin-bottom: 5px;
+	padding-left: 2rem;
+}
+
+section li {
+	flex:1;
+}
+
 footer {
   margin-top:30px;
   background-color: gray;
