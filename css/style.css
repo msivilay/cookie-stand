@@ -187,6 +187,10 @@ footer {
   height: 130px;
 }
 
+footer p {
+  padding-top:20px;
+}
+
 fieldset {
   display: flex;
   flex-direction: column;
