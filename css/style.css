@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&family=Raleway');
+
 h1 {
   font-family: helvetica;
 	color:rgb(147, 46, 230)
@@ -55,13 +57,31 @@ header {
   background-color: darkgray;
   margin-bottom: 30px;
 }
+
 header nav {
   height: 100px;
   margin: auto;
+	font-family: 'Raleway';
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration:none;
+}
+
+a:active {
+  text-decoration:none
 }
 
 header a {
-  color: lightgray;
+  color: white;
 }
 
 header img {
@@ -82,8 +102,11 @@ header nav li {
   flex: 1;
   text-align: center;
 }
+header nav li:nth-child(2){
+	font-size: large;
+}
 
-main {
+	main {
   width: 960px;
   margin: auto;
   display: flex;
