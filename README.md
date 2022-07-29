@@ -2,7 +2,7 @@
 
 ## Salmon cookies project for Code Fellows 201
 
-This is a project to set up a visually appealing website for a friend's salmon cookie shop. It calculates daily sales projections for each of it's locations.
+This is a project to set up a visually appealing website for a friend's salmon cookie shop. It calculates daily sales projections for each of its locations.
 
 Dominant languages used are HTML, CSS, and JavaScript.
 
